@@ -1,0 +1,179 @@
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Header */
+.destination-header {
+  background-image: url("/images/dubai-night.jpg"); /* Update path as needed */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.destination-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+.destination-header h1,
+.destination-header p {
+  position: relative;
+  z-index: 1; /* Ensures text appears above the overlay */
+  color: white; /* Ensure text color is readable */
+}
+
+.destination-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.destination-header p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: white; /* Ensure text color is white on the overlay */
+  font-weight: lighter; /* Lighter font weight for better visibility */
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0a9396;
+}
+
+/* Destination Overview */
+.destination-overview {
+  margin: 2rem 0;
+}
+
+/* Price Section - Card Styles */
+.price-cards-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.price-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-width: 200px;
+  background-color: #e9d8a6;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.price-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #003049;
+}
+
+.price-card p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d00000;
+}
+
+/* Best Time */
+.destination-best-time,
+.destination-activities,
+.destination-travel-tips,
+.destination-gallery,
+.destination-reviews {
+  margin: 2rem 0;
+}
+
+/* Things to Do */
+.destination-activities ul,
+.destination-travel-tips ul {
+  list-style: square inside;
+  background-color: #e0fbfc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.destination-activities li,
+.destination-travel-tips li {
+  margin-bottom: 0.5rem;
+}
+
+/* Gallery */
+.destination-gallery figure {
+  display: inline-block;
+  width: 30%;
+  margin-right: 1%;
+}
+
+.destination-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.destination-gallery figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Reviews */
+.destination-reviews blockquote {
+  background-color: #caffbf;
+  padding: 1rem;
+  border-left: 5px solid #80ed99;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Booking CTA */
+.destination-booking {
+  text-align: center;
+  background-color: #94d2bd;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.destination-booking .cta-button {
+  background-color: #ee9b00;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #001219;
+  color: white;
+  margin-top: 2rem;
+}

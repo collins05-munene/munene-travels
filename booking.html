@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Trip | Munene Travel</title>
+    <link rel="stylesheet" href="css/booking.css" />
+  </head>
+  <body>
+    <header class="destination-header">
+      <h1>Book Your Adventure</h1>
+      <p>Fill out the form below to begin your journey with Munene Travel.</p>
+    </header>
+
+    <main class="booking-container">
+      <section class="booking-form-section">
+        <form id="booking-form" method="POST" class="booking-form">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="destination">Destination:</label>
+          <select id="destination" name="destination" required>
+            <option value="">--Select Destination--</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Cape Town">Cape Town</option>
+            <option value="Tsavo">Tsavo</option>
+            <option value="Amboseli">Amboseli</option>
+            <option value="New York">New York</option>
+            <option value="London">London</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Paris">Paris</option>
+            <option value="Maasai Mara">Maasai Mara</option>
+            <option value="Mount Kenya">Mount Kenya</option>
+            <option value="Lake Nakuru">Lake Nakuru</option>
+            <option value="Diani Beach">Diani Beach</option>
+
+            <!-- Add more as needed -->
+          </select>
+
+          <label for="dates">Preferred Travel Dates:</label>
+          <input
+            type="text"
+            id="dates"
+            name="dates"
+            placeholder="e.g. 12th June - 18th June"
+            required
+          />
+
+          <label for="groupSize">Group Size:</label>
+          <select
+            id="groupSize"
+            name="groupSize"
+            required
+            onchange="toggleCustomGroup()"
+          >
+            <option value="">--Select Group Size--</option>
+            <option value="1">Solo</option>
+            <option value="2">Couple</option>
+            <option value="5">Group of 5</option>
+            <option value="10">Group of 10</option>
+            <option value="custom">Custom</option>
+          </select>
+
+          <!-- Custom input, hidden by default -->
+          <div
+            id="customGroupContainer"
+            style="display: none; margin-top: 1rem"
+          >
+            <label for="customGroupSize">Enter Group Size:</label>
+            <input
+              type="number"
+              id="customGroupSize"
+              name="customGroupSize"
+              min="1"
+              placeholder="e.g. 3, 7, 12"
+            />
+          </div>
+
+          <label for="notes">Additional Notes:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            placeholder="Any preferences, specific group size?"
+          ></textarea>
+
+          <button type="submit" class="cta-button">Submit Booking</button>
+        </form>
+      </section>
+      <!-- Confirmation Popup -->
+      <section id="popup" class="popup" hidden>
+        <div class="popup-content">
+          <h2>🎉 Booking Submitted!</h2>
+          <p>
+            Thank you for using Munene Travel.<br />Check your email for more
+            details and payment instructions.
+          </p>
+          <button id="close-popup">Close</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Munene Travel. All rights reserved.</p>
+    </footer>
+    <script src="js/booking.js"></script>
+  </body>
+</html>
