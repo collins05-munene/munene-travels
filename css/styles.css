@@ -129,7 +129,7 @@ nav ul li a {
 }
 
 /* Destinations Section */
-#destinations h2 {
+.h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #007bff;
